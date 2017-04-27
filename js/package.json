@@ -1,0 +1,27 @@
+{
+	"engines": {
+		"node": "4.x || 6.x"
+	},
+	"dependencies": {
+		"sap-hdbext": "4.2.0",
+		"sap-xssec": "^0.9.1",
+		"sap-xsenv": "1.2.4",
+		"sap-xsjs": "latest",
+		"express": "~4.15",		
+		"express-validator": "^2.20.3",		
+		"sap-logging": "latest",
+		"passport": "~0.3.2",
+		"async": "latest",
+		"node-zip": "~1.1.1",
+		"accept-language-parser": "latest"
+	},
+	"description": "",
+	"devDependencies": {},
+	"files": [],
+	"main": "server.js",
+	"name": "js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"version": "1.0.0"
+}

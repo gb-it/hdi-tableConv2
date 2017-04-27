@@ -1,0 +1,1 @@
+xs cups CROSS_SCHEMA_SYS -p "{\"host\":\"localhost\",\"port\":\"31013\",\"user\":\"SYSTEM\",\"password\":\"<Password>\",\"driver\":\"com.sap.db.jdbc.Driver\",\"tags\":[\"hana\"] , \"schema\" : \"SYS\" }"

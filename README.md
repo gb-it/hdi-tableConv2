@@ -1,1 +1,2 @@
-# hdi-tableConv2
+# hdi-tableConv
+Convert Catalog table to HDI HDBCDS format
