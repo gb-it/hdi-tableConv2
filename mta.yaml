@@ -12,16 +12,16 @@ modules:
         url: "${default-url}"
   requires:
     - name: tableConv-uaa
-    - name: CROSS_SCHEMA_SYS
+    - name: TBRS_CSP-grantor
     
 - name: web
   type: html5
   path: web
   requires:
     - name: tableConv-uaa
-#    - name: ui5-lib
-#      properties:
-#        ui5liburl: ~{url}      
+    - name: ui5-lib
+      properties:
+        ui5liburl: ~{url}      
     - name: nodejs
       group: destinations
       properties:
@@ -31,22 +31,31 @@ modules:
 
 resources:
 
-- name: CROSS_SCHEMA_SYS
+# - name: CROSS_SCHEMA_SYS
+- name: TBRS_CSP-grantor
   type: org.cloudfoundry.existing-service
   parameters:
-    service-name: CROSS_SCHEMA_SYS
+    service-name: TBRS_CSP-grantor
   properties:
     sys-service-name: ${service-name}
-    
+#   parameters:
+#     service-name: CROSS_SCHEMA_SYS
+#   properties:
+#     sys-service-name: ${service-name}    
 - name: tableConv-uaa
   type: com.sap.xs.uaa
-#  parameters:
-#    config_path: ./xs-security.json
-
+  #parameters:
+  #  config_path: ./xs-security.json
+- name: ui5-lib
+  type: configuration
+  parameters:
+    ID: 'com.sap.ui5.dist.sapui5-dist-xsa.XSAC_SAPUI5_FESV3:sapui5_fesv3'
+    name: sapui5_fesv3
+    version: '1.44.24'
 #Only if Avilable
 # - name: ui5-lib
-  #type: configuration
-  #parameters:
-    # provider-id: 'com.sap.ui5.dist.sapui5-dist-xsa.XSAC_UI5_FESV3:sapui5_fesv3'
-    # version: '>=1.44.0'      
+#   type: configuration
+#   parameters:
+#     provider-id: 'com.sap.ui5.dist.sapui5-dist-xsa.XSAC_UI5_FESV3:sapui5_fesv3'
+#     version: '1.44.20'      
       

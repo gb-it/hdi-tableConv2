@@ -52,7 +52,7 @@ sap.ui.core.UIComponent.extend("sap.xsopen.tableConv.Component", {
 	},
 	
 	onLoadSession: function(myJSON){
-		for( var i = 0; i<myJSON.session.length; i++)
+		for( var i = 0; i < myJSON.session.length; i++)
 	     {
 		   var config =  this.getModel("config");
 		   config.setProperty("/UserName",myJSON.session[i].UserName);
